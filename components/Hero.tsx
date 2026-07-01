@@ -12,7 +12,7 @@ export default function Hero() {
 
         {/* Heading */}
         <h1 className="animate-fade-up mt-4 font-serif text-4xl sm:text-5x1 lg:text-7x1 font-medium leading-[1.12] tracking-tight text-foreground [animation-delay:100ms] sm:text-5xl lg:text-6xl">
-          Predictable pipeline, engineered for B2B teams.
+          Predictable pipeline, engineered for B2B growth.
         </h1>
 
         {/* Subheading */}

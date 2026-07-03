@@ -1,9 +1,44 @@
 "use client";
-
+import { useState } from "react";
 import FadeUp from "./FadeUp";
 import { Mail, Clock, ArrowRight } from "lucide-react";
 
 export default function ContactCTA() {
+    const [name, setName] = useState("");
+const [email, setEmail] = useState("");
+const [message, setMessage] = useState("");
+const [loading, setLoading] = useState(false);
+const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+  
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          message,
+        }),
+      });
+  
+      if (res.ok) {
+        alert("Message sent successfully!");
+        setName("");
+        setEmail("");
+        setMessage("");
+      } else {
+        alert("Failed to send message.");
+      }
+    } catch (error) {
+      alert("Something went wrong.");
+    }
+  
+    setLoading(false);
+  };
   return (
     <section id="contact" className="px-6 py-20 sm:py-24 lg:px-8 lg:py-28">
       <div className="mx-auto max-w-3xl">
@@ -45,7 +80,7 @@ export default function ContactCTA() {
             </div>
 
             {/* Form */}
-            <form className="mt-12 space-y-5">
+            <form onSubmit={handleSubmit} className="mt-12 space-y-5">
 
               <div>
                 <label className="mb-2 block text-sm font-medium text-foreground">
@@ -53,10 +88,12 @@ export default function ContactCTA() {
                 </label>
 
                 <input
-                  type="text"
-                  placeholder=" "
-                  className="w-full rounded-2xl border border-border-soft bg-background px-5 py-4 outline-none transition focus:border-accent"
-                />
+  type="text"
+  value={name}
+  onChange={(e) => setName(e.target.value)}
+  placeholder=" "
+  className="w-full rounded-2xl border border-border-soft bg-background px-5 py-4 outline-none transition focus:border-accent"
+/>
               </div>
 
               <div>
@@ -65,10 +102,12 @@ export default function ContactCTA() {
                 </label>
 
                 <input
-                  type="Your Email"
-                  placeholder=" "
-                  className="w-full rounded-2xl border border-border-soft bg-background px-5 py-4 outline-none transition focus:border-accent"
-                />
+  type="email"
+  value={email}
+  onChange={(e) => setEmail(e.target.value)}
+  placeholder=" "
+  className="w-full rounded-2xl border border-border-soft bg-background px-5 py-4 outline-none transition focus:border-accent"
+/>
               </div>
 
               <div>
@@ -77,10 +116,12 @@ export default function ContactCTA() {
                 </label>
 
                 <textarea
-                  rows={5}
-                  placeholder="Tell us about your goals."
-                  className="w-full resize-none rounded-2xl border border-border-soft bg-background px-5 py-4 outline-none transition focus:border-accent"
-                />
+  rows={5}
+  value={message}
+  onChange={(e) => setMessage(e.target.value)}
+  placeholder="Tell us about your goals."
+  className="w-full resize-none rounded-2xl border border-border-soft bg-background px-5 py-4 outline-none transition focus:border-accent"
+/>
               </div>
 
               <div className="flex justify-center pt-3">

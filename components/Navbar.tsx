@@ -39,11 +39,13 @@ export default function Navbar() {
 
         {/* CTA */}
         <a
-          href="#contact"
-          className="inline-flex h-9 items-center gap-2 rounded-full bg-[#4F6B63] px-5 text-sm font-semibold text-white transition hover:opacity-90 sm:px-5 sm:py-1.5 sm:text-sm"
-        >
-          Book a call
-        </a>
+  href="https://calendly.com/sterlingoakgrowth/strategy-call"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-flex h-9 items-center gap-2 rounded-full bg-[#4F6B63] px-5 text-sm font-semibold text-white ..."
+>
+  Book a call
+</a>
 
       </div>
 

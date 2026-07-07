@@ -66,9 +66,14 @@ export default function Footer() {
                   FAQ
                 </Link>
 
-                <Link href="#contact" className="transition hover:text-accent">
-                  Book a call
-                </Link>
+               <a
+               href="https://calendly.com/sterlingoakgrowth/strategy-call"
+               target="_blank"
+               rel="noopener noreferrer"
+               className="transition hover:text-accent"
+               >
+                Book a call 
+                </a>
               </div>
             </div>
 
@@ -91,7 +96,10 @@ export default function Footer() {
               hello@sterlingoak.net
             </a>
 
-            <Link href="#" className="transition hover:text-accent">
+            <Link
+             href="/privacy-policy" 
+             className="transition hover:text-accent"
+             >
               Privacy
             </Link>
 

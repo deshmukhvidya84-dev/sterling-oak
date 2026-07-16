@@ -103,7 +103,7 @@ export default function Footer() {
               Privacy
             </Link>
 
-            <Link href="#" className="transition hover:text-accent">
+            <Link href="/terms" className="transition hover:text-accent">
               Terms
             </Link>
           </div>

@@ -24,18 +24,15 @@ export default function Hero() {
         {/* Stats */}
         <div className="mt-8 grid w-full grid-cols-1 gap-10 sm:mt-10 sm:grid-cols-3 sm:gap-3">
           <div className="mx-auto flex w-40 flex-col items-center text-center">
-            <p className="text-3xl font-semibold text-[#4F6B63]">200K+</p>
-            <p className="mt-1 text-sm text-gray-500">Emails Sent</p>
+            <p className="text-3xl font-semibold text-[#4F6B63]">Human First Outreach</p>
           </div>
 
           <div className="mx-auto flex w-40 flex-col items-center text-center">
-            <p className="text-3xl font-semibold text-[#4F6B63]">1,500+</p>
-            <p className="mt-1 text-sm text-gray-500">Meetings Booked</p>
+            <p className="text-3xl font-semibold text-[#4F6B63]">AI Assisted Research</p>
           </div>
 
           <div className="mx-auto flex w-40 flex-col items-center text-center">
-            <p className="text-3xl font-semibold text-[#4F6B63]">97%</p>
-            <p className="mt-1 text-sm text-gray-500">Deliverability</p>
+            <p className="text-3xl font-semibold text-[#4F6B63]">Quality Over Volume</p>
           </div>
         </div>
 

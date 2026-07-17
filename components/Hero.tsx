@@ -28,7 +28,7 @@ export default function Hero() {
           </div>
 
           <div className="mx-auto flex w-40 flex-col items-center text-center">
-            <p className="text-3xl font-semibold text-[#4F6B63]">Human + AI Research</p>
+            <p className="text-3xl font-semibold text-[#4F6B63]">ICP Research</p>
           </div>
 
           <div className="mx-auto flex w-40 flex-col items-center text-center">
